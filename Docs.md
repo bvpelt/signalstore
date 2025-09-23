@@ -1,6 +1,6 @@
 # Course from https://www.youtube.com/watch?v=HqxY0JPlh54 
 
-https://youtu.be/HqxY0JPlh54?feature=shared&t=909
+https://youtu.be/HqxY0JPlh54?feature=shared&t=1503
 
 
 ## Extra dependencies
