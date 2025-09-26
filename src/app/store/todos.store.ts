@@ -14,7 +14,7 @@ type TodosState = {
 const initialState: TodosState = {
   todos: [],
   loading: false,
-  filter: "all",
+  filter: "completed",
 };
 
 // The store definition
@@ -54,6 +54,10 @@ export const TodosStore = signalStore(
           ),
         }));
       },
+
+      updateFilter(filter: TodosFilter) {
+        patchState(store, { filter });
+      }
     })
   )
 );
