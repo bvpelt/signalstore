@@ -1,16 +1,24 @@
 import { Injectable } from "@angular/core";
 import { TODOS } from "../model/mock-data";
+import { Todo } from "../model/todo.model";
 
 @Injectable({ providedIn: "root" })
 export class TodosService {
-
   /* Using mock data with a simulated delay to mimic a real HTTP call */
   async getTodos() {
     await sleep(1000); // simulate network delay of 1000ms
     return TODOS;
   }
+
+  async addTodo(todo: Partial<Todo>): Promise<Todo> {
+    await sleep(1000);
+    return {
+      id: Math.random().toString(36).substring(2, 9), // generate a random id
+      ...todo
+    } as Todo;
+  }
 }
 
 async function sleep(ms: number) {
-  return new Promise<void>(resolve => setTimeout(resolve, ms));
+  return new Promise<void>((resolve) => setTimeout(resolve, ms));
 }
