@@ -14,7 +14,8 @@ export class App implements OnInit {
   store = inject(TodosStore);
 
   ngOnInit(): void {
-    this.loadTodos().then(() => console.log("Todos loaded"));
+//    this.loadTodos().then(() => console.log("Todos loaded"));
+    this.loadTodos();
   }
 
   async loadTodos() {
